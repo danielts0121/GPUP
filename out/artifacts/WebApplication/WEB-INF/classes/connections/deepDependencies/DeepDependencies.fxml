@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #FCF5EC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connections.deepDependencies.DeepDependenciesController">
+   <children>
+      <ListView fx:id="whatIfListView" disable="true" layoutX="18.0" layoutY="149.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="238.0" prefWidth="567.0" />
+      <Label layoutX="24.0" layoutY="54.0" text="Target:" />
+      <ComboBox fx:id="whatIfTargetComboBox" layoutX="24.0" layoutY="75.0" onAction="#whatIfTargetComboBoxClicked" prefWidth="150.0" />
+      <RadioButton fx:id="whatIfRequiredForRadioButton" focusTraversable="false" layoutX="197.0" layoutY="75.0" mnemonicParsing="false" onAction="#whatIfRequiredForClicked" onKeyPressed="#whatIfRequiredForKeyBoardPressed" selected="true" text="Required for">
+         <toggleGroup>
+            <ToggleGroup fx:id="conactions1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="whatIfDependsOnRadioButton" focusTraversable="false" layoutX="197.0" layoutY="98.0" mnemonicParsing="false" onAction="#whatIfDependsOnClicked" onKeyPressed="#whatIfDependsOnKeyBoardPressed" text="Depends on">
+         <toggleGroup>
+            <ToggleGroup fx:id="conactions1" />
+         </toggleGroup>
+      </RadioButton>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="600.0" text="Deep Dependencies" underline="true">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="197.0" layoutY="54.0" text="Direction:" />
+   </children>
+</AnchorPane>

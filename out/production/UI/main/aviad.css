@@ -1,0 +1,330 @@
+
+{
+ dark-primary-color    : #ff2f00  ;
+ default-primary-color : #ff7300  ;
+ light-primary-color   : #ff9900  ;
+ text-primary-color    : #050049  ;
+ accent-color          : #ffffff  ;
+ divider-color         : #ffdc73  ;
+}
+
+#optionsBar{
+ -fx-min-width: 155;
+}
+
+.primaryBackground{
+ -fx-background-image: url(/resources/images/aviad/orange.jpg);
+ -fx-background-size: stretch;
+}
+.secondaryBackground{
+ -fx-background-color: default-primary-color;
+}
+
+.tree-cell{
+ -fx-background-color: linear-gradient(dark-primary-color,default-primary-color);
+ -fx-text-fill: white;
+}
+.tree-cell:selected{
+ -fx-background-color: linear-gradient(divider-color,accent-color);
+ -fx-text-fill: black;
+}
+.tree-cell .tree-disclosure-node .arrow{
+ -fx-background-color: white;
+}
+
+.tree-cell:selected .tree-disclosure-node .arrow{
+ -fx-background-color: black;
+}
+
+.menuBar{
+ -fx-background-color : dark-primary-color;
+}
+
+.scroll-bar{
+ -fx-background-color : light-primary-color;
+}
+.scroll-bar:vertical > .thumb{
+ -fx-background-color : transparent;
+ -fx-background-image: url(/resources/images/aviad/bisliVer.png);
+ -fx-background-size: stretch auto;
+}
+.scroll-bar:horizontal > .thumb{
+ -fx-background-color : transparent;
+ -fx-background-image: url(/resources/images/aviad/bisliHor.png);
+ -fx-background-size: auto stretch;
+}
+.button{
+ -fx-background-color : transparent;
+ -fx-background-image: url(/resources/images/aviad/bislibutton.png);
+ -fx-background-size: stretch stretch;
+}
+.button > .text{
+ -fx-fill : text-primary-color;
+ -fx-font-size : 18px;
+ -fx-font-family : "Showcard Gothic";
+ -fx-font-weight : bold;
+ -fx-effect: dropshadow(gaussian, #ffffff,3,0,0,0);
+}
+
+.button:hover{
+ -fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+}
+.toggle-button{
+ -fx-background-color : transparent;
+ -fx-background-image: url(/resources/images/aviad/ciflibutton.png);
+ -fx-background-size: stretch stretch;
+}
+.toggle-button > .text{
+ -fx-fill : text-primary-color;
+ -fx-font-size : 15px;
+ -fx-font-family : "Showcard Gothic";
+ -fx-font-weight : bold;
+ -fx-effect: dropshadow(gaussian, #ffffff,3,0,0,0);
+}
+
+.toggle-button:hover{
+ -fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+ -fx-text-font-size: 18px;
+ -fx-border-color: divider-color;
+}
+
+.toggle-button:hover > .text{
+ -fx-font-size : 16px;
+}
+
+.toggle-button:selected{
+ -fx-background-color : linear-gradient(dark-primary-color, default-primary-color);
+ -fx-effect: innershadow(gaussian,black,10,0.3,1,1);
+}
+
+.label{
+ -fx-text-fill : text-primary-color;
+ -fx-font-size : 14px;
+ -fx-font-family : "Showcard Gothic";
+ -fx-effect: dropshadow(gaussian, #ffffff,3,0,0,0);
+}
+
+.headLines{
+ -fx-font-size : 24px;
+ -fx-font-family : "Showcard Gothic";
+ -fx-text-fill: accent-color;
+ -fx-font-weight : bold;
+ -fx-effect: innershadow(gaussian, #000000,3,0.2,0.5,0.5);
+}
+
+.menu:hover{
+ -fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+}
+
+.dialog-pane > .button-bar > .container{
+ -fx-background-color: light-primary-color;
+}
+.dialog-pane{
+ -fx-background-color: default-primary-color;
+}
+.header-panel{
+ -fx-background-color: default-primary-color;
+}
+.searchfilebutton {
+ -fx-font-size: 12px;
+ -fx-font-family: "Showcard Gothic";
+ -fx-background-color: default-primary-color;
+}
+.title {
+ -fx-background-color: default-primary-color;
+}
+.title > .text{
+ -fx-fill: text-primary-color;
+ -fx-effect: dropshadow(gaussian, #ffffff,3,0,0,0);
+}
+
+.tab-header-background{
+ -fx-background-color: dark-primary-color;
+}
+.tab{
+ -fx-background-color: default-primary-color;
+ -fx-effect: dropshadow(gaussian, #ffffff,3,0,0,0);
+}
+.tab-label{
+ -fx-text-fill: text-primary-color;
+}
+
+.tab:hover{
+ -fx-background-color : linear-gradient(default-primary-color, light-primary-color);
+}
+.tab:selected{
+ -fx-background-color: light-primary-color;
+}
+.text-area {
+ -fx-background-color: light-primary-color;
+}
+
+#logo {
+ -fx-image: url("/resources/images/aviad/aviadLogo.png");
+ -fx-repeat: stretch;
+ -fx-size: 900 506;
+ -fx-position: center center;
+ -fx-opacity : 1;
+}
+.menu-item{
+ -fx-background-color: light-primary-color;
+}
+
+.text{
+ -fx-effect: dropshadow(gaussian, #ffffff,3,0,0,0);
+}
+
+.menu-item:hover{
+ -fx-background-color: dark-primary-color;
+}
+
+.check-box{
+ -fx-text-fill: text-primary-color;
+}
+
+.radio-button{
+ -fx-text-fill: text-primary-color;
+}
+
+.list-view{
+ -fx-background-color:linear-gradient(orange,darkorange);
+ -fx-effect: innershadow(gaussian,orangered,15,0.3,2,2);
+}
+
+.table-view{
+ -fx-background-color:linear-gradient(orange,darkorange);
+ -fx-effect: innershadow(gaussian,orangered,15,0.3,2,2);
+}
+
+.progress-bar:determinate >.bar {
+ -fx-background-color : transparent;
+ -fx-background-image: url(/resources/images/aviad/bisliHor.png);
+ -fx-background-size: auto stretch;
+ -fx-effect: innershadow(gaussian,white,3,0.1,1,1);
+}
+.track{
+ -fx-background-color: linear-gradient(default-primary-color, light-primary-color);
+ -fx-effect: innershadow(gaussian,black,10,0.3,1,1);
+}
+.text-area .content{
+ -fx-background-color:linear-gradient(orange, #ff7300);
+ -fx-effect: innershadow(gaussian,orangered,15,0.3,2,2);
+}
+.selectionButton{
+ -fx-pref-width: 127;
+ -fx-pref-height: 50;
+}
+.selectionButton > .text{
+ -fx-font-size: 13px;
+}
+.fileButton{
+ -fx-pref-height: 50;
+}
+
+.combo-box > .list-cell > .text{
+ -fx-font-weight: bold;
+ -fx-fill: text-primary-color;
+}
+
+.combo-box{
+ -fx-background-color : linear-gradient(default-primary-color, light-primary-color);
+ -fx-border-color: divider-color;
+}
+
+.combo-box:hover{
+ -fx-background-color : linear-gradient(#ffc400 , light-primary-color );
+ -fx-effect: innershadow(gaussian, #ffffff,5,0.2,1,1);
+}
+
+.list-cell:even{
+ -fx-background-color:  #ffc400;
+ -fx-text-fill: text-primary-color;
+}
+
+.list-cell:odd{
+ -fx-background-color: light-primary-color;
+ -fx-text-fill: text-primary-color;
+}
+
+.list-cell:selected{
+ -fx-background-color: dark-primary-color;
+ -fx-text-fill: text-primary-color;
+}
+
+.combo-box .list-cell:hover{
+ -fx-background-color: rgb(162, 30, 0);
+}
+
+
+/*table view*/
+
+
+
+.table-view {
+ -fx-background-color:linear-gradient(orange,darkorange);
+ -fx-effect: innershadow(gaussian,orangered,15,0.3,2,2);
+}
+
+.table-view:focused {
+ -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+ -fx-background-color: linear-gradient(dark-primary-color, default-primary-color);
+ -fx-effect: dropshadow(gaussian, #000000, 3, 0, 0, 0);
+}
+
+.table-view .column-header-background .label {
+ -fx-background-color: transparent;
+ -fx-text-fill: black;
+}
+
+.table-view .column-header {
+ -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+ -fx-text-fill: text-primary-color;
+ -fx-font-size: 15px;
+ -fx-text-alignment: center center;
+}
+
+.table-row-cell {
+ -fx-background-color: -fx-table-cell-border-color, #ffc400;
+ -fx-background-insets: 0, 0 0 1 0;
+ -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd {
+ -fx-background-color: -fx-table-cell-border-color, light-primary-color;
+ -fx-background-insets: 0, 0 0 1 0;
+ -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+ -fx-background-color: dark-primary-color;
+ -fx-background-insets: 0;
+ -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+ -fx-background-color: transparent;
+ -fx-min-height: 0;
+ -fx-pref-height: 0;
+ -fx-max-height: 0;
+ -fx-min-width: 0;
+ -fx-pref-width: 0;
+ -fx-max-width: 0;
+}
+
+.table-view > .virtual-flow > .scroll-bar:horizontal > .increment-button,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .decrement-button {
+ -fx-opacity: 0;
+}
+
+.colorLable{
+ -fx-text-fill : black;
+ -fx-font-size : 17px;
+}

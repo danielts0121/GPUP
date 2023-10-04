@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="929.0" styleClass="primaryBackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard.DashboardController">
+   <items>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" styleClass="primaryBackground">
+         <children>
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="trans" VBox.vgrow="ALWAYS">
+               <content>
+                  <Accordion styleClass="primaryBackground">
+                    <panes>
+                        <TitledPane fx:id="OnlineGraphsTiltedPane" animated="false" layoutX="10.0" layoutY="41.0" text="Online Graphs">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" styleClass="primaryBackground">
+                                 <children>
+                                    <ListView fx:id="OnlineGraphsListView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                    <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="75.0" prefWidth="200.0" spacing="5.0" VBox.vgrow="SOMETIMES">
+                                       <children>
+                                          <Button fx:id="AddNewGraphButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="70.0" mnemonicParsing="false" onAction="#AddNewGraphButtonClicked" prefWidth="75.0" text="Add new&#10; graph" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="LoadGraphButton" layoutX="122.0" layoutY="20.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="70.0" mnemonicParsing="false" onAction="#LoadGraphButtonClicked" prefWidth="75.0" text="Load&#10;selected&#10;graph" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                      <TitledPane fx:id="OnlineAdminsTiltedPane" animated="false" text="Online admins">
+                           <content>
+                              <VBox spacing="5.0" styleClass="primaryBackground">
+                                 <children>
+                                    <ListView fx:id="onlineAdminsListView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                      <TitledPane fx:id="OnlineWorkersTiltedPane" animated="false" text="Online workers">
+                           <content>
+                              <VBox spacing="5.0" styleClass="primaryBackground">
+                                 <children>
+                                    <ListView fx:id="onlineWorkersListView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="OnlineTasksTiltedPane" animated="false" layoutX="10.0" layoutY="72.0" styleClass="trans" text="Online tasks">
+                           <content>
+                              <VBox spacing="5.0" styleClass="primaryBackground">
+                                 <children>
+                                    <VBox VBox.vgrow="SOMETIMES">
+                                       <children>
+                                          <Label text="My tasks:" />
+                                          <ListView fx:id="myTasksListView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                          <Button fx:id="loadSelectedTaskButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="30.0" mnemonicParsing="false" onAction="#loadSelectedTaskButtonClicked" prefHeight="50.0" prefWidth="50.0" text="Load selected task" textAlignment="CENTER" />
+                                       </children>
+                                    </VBox>
+                                    <VBox layoutX="15.0" layoutY="15.0" VBox.vgrow="SOMETIMES">
+                                       <children>
+                                          <Label text="All tasks:" />
+                                          <ListView fx:id="AllTasksListView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                          <HBox VBox.vgrow="SOMETIMES">
+                                             <children>
+                                                <Button fx:id="ReloadTaskButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="30.0" mnemonicParsing="false" onAction="#ReloadTaskButtonClicked" prefHeight="50.0" prefWidth="50.0" text="Reload selected task as copy" textAlignment="CENTER" HBox.hgrow="SOMETIMES" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" layoutX="10.0" layoutY="190.0" spacing="10.0">
+                                             <children>
+                                                <RadioButton fx:id="FromScratchRadioButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" selected="true" text="From scratch">
+                                                   <toggleGroup>
+                                                      <ToggleGroup fx:id="increment" />
+                                                   </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton fx:id="IncrementalRadioButton" mnemonicParsing="false" text="Incremental" toggleGroup="$increment" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="200.0" styleClass="primaryBackground">
+         <items>
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="primaryBackground">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="primaryBackground">
+                     <children>
+                        <Label alignment="CENTER" minWidth="60.0" prefWidth="-1.0" style="&#10;" styleClass="headLines" text="Selected graph information" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x11" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x21" />
+                           </textFill>
+                        </Label>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" styleClass="trans" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" spacing="20.0" styleClass="trans" VBox.vgrow="NEVER">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Graph Name: " />
+                                          <TextField fx:id="GraphNameTextField" editable="false" promptText="Graph's name" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Uploaded by: " />
+                                          <TextField fx:id="uploadedByTextField" editable="false" promptText="Admin's name" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="70.0" styleClass="primaryBackground" vbarPolicy="NEVER" VBox.vgrow="NEVER">
+                                 <content>
+                                    <TableView fx:id="GraphTargetsTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="70.0" minWidth="-Infinity" prefHeight="70.0" prefWidth="307.0">
+                                       <columns>
+                                          <TableColumn fx:id="GraphTargetsAmount" minWidth="30.0" prefWidth="-1.0" text="Targets" />
+                                          <TableColumn fx:id="GraphIndependentAmount" minWidth="40.0" prefWidth="-1.0" text="Independent" />
+                                          <TableColumn fx:id="GraphLeafAmount" minWidth="8.0" prefWidth="-1.0" text="Leaf" />
+                                          <TableColumn fx:id="GraphMiddleAmount" minWidth="30.0" prefWidth="-1.0" text="Middle" />
+                                          <TableColumn fx:id="GraphRootAmount" minWidth="13.0" prefWidth="-1.0" text="Root" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                              <HBox alignment="CENTER" spacing="20.0" styleClass="trans">
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="5.0">
+                                       <children>
+                                          <Label text="Simulation task &#10;payment per target:" />
+                                          <TextField fx:id="SimulationPriceTextField" editable="false" maxHeight="1.7976931348623157E308" prefWidth="140.0" promptText="payment" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="161.0" layoutY="10.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Compilation task &#10;payment per target:" />
+                                          <TextField fx:id="CompilationPriceTextField" editable="false" maxHeight="1.7976931348623157E308" prefWidth="140.0" promptText="payment" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="primaryBackground">
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="primaryBackground">
+                     <children>
+                        <Label alignment="CENTER" minWidth="60.0" prefWidth="-1.0" style="&#10;" styleClass="headLines" text="Selected task information" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x1" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                           </textFill>
+                        </Label>
+                        <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" styleClass="trans" VBox.vgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" spacing="10.0" styleClass="trans" VBox.vgrow="NEVER">
+                                 <children>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Task Name: " HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="TaskNameTextField" editable="false" maxWidth="1.7976931348623157E308" prefWidth="120.0" promptText="Task's name" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER">
+                                       <children>
+                                          <Label text="Created by: " HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="CreatedByTextField" editable="false" maxWidth="1.7976931348623157E308" prefWidth="120.0" promptText="Admin's name" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="36.0" layoutY="10.0">
+                                       <children>
+                                          <Label text="On graph: " HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="TaskOnGraphTextField" editable="false" maxWidth="1.7976931348623157E308" prefWidth="120.0" promptText="Graph's name" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" layoutX="22.0" layoutY="10.0">
+                                       <children>
+                                          <Label text="Type: " HBox.hgrow="ALWAYS" />
+                                          <TextField fx:id="TaskTypeTextField" editable="false" maxWidth="1.7976931348623157E308" prefWidth="120.0" promptText="Task's type" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" minHeight="60.0" styleClass="primaryBackground" vbarPolicy="NEVER" VBox.vgrow="NEVER">
+                                 <content>
+                                    <TableView fx:id="TaskTypeTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="70.0" minWidth="-Infinity" prefHeight="70.0" prefWidth="307.0">
+                                       <columns>
+                                          <TableColumn fx:id="TaskTargetsAmount" minWidth="30.0" prefWidth="-1.0" text="Targets" />
+                                          <TableColumn fx:id="TaskIndependentAmount" minWidth="40.0" prefWidth="-1.0" text="Independent" />
+                                          <TableColumn fx:id="TaskLeafAmount" minWidth="8.0" prefWidth="-1.0" text="Leaf" />
+                                          <TableColumn fx:id="TaskMiddleAmount" minWidth="30.0" prefWidth="-1.0" text="Middle" />
+                                          <TableColumn fx:id="TaskRootAmount" minWidth="13.0" prefWidth="-1.0" text="Root" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                              <ScrollPane fitToHeight="true" fitToWidth="true" layoutX="10.0" layoutY="56.0" minHeight="60.0" styleClass="primaryBackground" vbarPolicy="NEVER">
+                                 <content>
+                                    <TableView fx:id="TaskInfoTableView" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="70.0" minWidth="-Infinity" prefHeight="70.0" prefWidth="307.0">
+                                       <columns>
+                                          <TableColumn fx:id="TaskStatus" minWidth="30.0" prefWidth="-1.0" text="status" />
+                                          <TableColumn fx:id="currentWorkers" minWidth="13.0" prefWidth="-1.0" text="current workers" />
+                                          <TableColumn fx:id="TaskWorkPayment" minWidth="30.0" prefWidth="-1.0" text="work payment" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+   </items>
+</SplitPane>

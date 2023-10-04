@@ -1,0 +1,278 @@
+
+{
+ dark-primary-color    : #310000  ;
+ default-primary-color : #424242  ;
+ light-primary-color   : #616161  ;
+ text-primary-color    : #ffffff  ;
+ accent-color          : #ffe3c5  ;
+ divider-color         : #d3d3d3  ;
+}
+
+.primaryBackground{
+ -fx-background-image: url(/resources/images/street/darkenWall.jpg);
+}
+.secondaryBackground{
+ -fx-background-color: default-primary-color;
+}
+
+.menuBar{
+ -fx-background-color : dark-primary-color;
+}
+
+.scroll-bar{
+ -fx-background-color : light-primary-color;
+}
+.thumb{
+ -fx-background-color : linear-gradient(dark-primary-color,default-primary-color);
+ -fx-effect: innershadow(gaussian,white,5,0.2,1,1);
+}
+
+.tree-cell{
+ -fx-background-color: linear-gradient(dark-primary-color,default-primary-color);
+ -fx-text-fill: text-primary-color;
+}
+.tree-cell:selected{
+ -fx-background-color: linear-gradient(divider-color,accent-color);
+ -fx-text-fill: dark-primary-color;
+}
+.tree-cell .tree-disclosure-node .arrow{
+ -fx-background-color: text-primary-color;
+}
+
+.tree-cell:selected .tree-disclosure-node .arrow{
+ -fx-background-color: dark-primary-color;
+}
+
+.button{
+ -fx-border-color : divider-color;
+ -fx-background-color : dark-primary-color;
+ -fx-text-fill : text-primary-color;
+ -fx-font-size : 14px;
+ -fx-font-family : "Jokerman";
+ -fx-font-weight : bold;
+}
+.button:hover{
+ -fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+}
+
+.toggle-button{
+ -fx-background-color : dark-primary-color;
+ -fx-text-fill : text-primary-color;
+ -fx-font-size : 14px;
+ -fx-font-family : "Jokerman";
+ -fx-font-weight : bold;
+}
+
+.toggle-button:hover{
+ -fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+ -fx-border-width: 2;
+ -fx-font-size: 15px;
+ -fx-border-color: divider-color;
+}
+.toggle-button:selected{
+ -fx-background-color : linear-gradient(dark-primary-color, default-primary-color);
+ -fx-effect: innershadow(gaussian,black,10,0.3,1,1);
+}
+
+.label{
+ -fx-text-fill : text-primary-color;
+ -fx-font-size : 14px;
+ -fx-font-family : "Jokerman";
+}
+
+.headLines{
+ -fx-font-size : 24px;
+ -fx-font-family : "Jokerman";
+ -fx-text-fill: accent-color;
+ -fx-font-weight : bold;
+ -fx-text-effect: dropshadow(gaussian, #ffffff,3,0,0,0);
+}
+
+.menu:hover{
+ -fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+}
+
+.dialog-pane > .button-bar > .container{
+ -fx-background-color: light-primary-color;
+}
+.dialog-pane{
+ -fx-background-color: default-primary-color;
+}
+.header-panel{
+ -fx-background-color: default-primary-color;
+}
+.searchfilebutton {
+ -fx-font-size: 12px;
+ -fx-font-family: "Jokerman";
+ -fx-background-color: default-primary-color;
+}
+.title {
+ -fx-background-color: default-primary-color;
+}
+.title > .text{
+ -fx-fill: text-primary-color;
+}
+
+.tab-header-background{
+ -fx-background-color: dark-primary-color;
+}
+.tab{
+ -fx-background-color: default-primary-color;
+}
+.tab-label{
+ -fx-text-fill: text-primary-color;
+}
+.tab:hover{
+ -fx-background-color : linear-gradient(default-primary-color, light-primary-color);
+}
+.tab:selected{
+ -fx-background-color: light-primary-color;
+}
+.text-area {
+ -fx-background-color: light-primary-color;
+}
+
+#logo {
+ -fx-image: url("/resources/images/street/streetLogo.png");
+ -fx-repeat: stretch;
+ -fx-size: 900 506;
+ -fx-position: center center;
+ -fx-opacity : 1;
+}
+.menu-item{
+ -fx-background-color: light-primary-color;
+}
+.menu-item:hover{
+ -fx-background-color: dark-primary-color;
+}
+
+.check-box{
+ -fx-text-fill: text-primary-color;
+}
+
+.radio-button{
+ -fx-text-fill: text-primary-color;
+}
+
+.progress-bar:determinate >.bar {
+ -fx-background-color : linear-gradient(deepskyblue,darkblue );
+ -fx-effect: innershadow(gaussian,white,5,0.2,1,1);
+}
+.track{
+ -fx-background-color: linear-gradient(default-primary-color, light-primary-color);
+ -fx-effect: innershadow(gaussian,black,10,0.3,1,1);
+}
+.text-area .content{
+ -fx-background-color:linear-gradient(dark-primary-color,default-primary-color);
+
+}
+
+.combo-box > .list-cell > .text{
+ -fx-font-weight: bold;
+ -fx-fill: text-primary-color;
+}
+
+.combo-box{
+ -fx-background-color : linear-gradient(default-primary-color, light-primary-color);
+ -fx-border-color: divider-color;
+}
+
+.list-view{
+  -fx-background-color: #424242;
+ }
+
+.combo-box:hover{
+ -fx-background-color : linear-gradient(#949494 , light-primary-color );
+ -fx-effect: innershadow(gaussian, #ffffff,5,0.2,1,1);
+}
+
+.list-cell:even{
+ -fx-background-color:  #616161;
+ -fx-text-fill: text-primary-color;
+}
+
+.list-cell:odd{
+ -fx-background-color:  #424242;
+ -fx-text-fill: text-primary-color;
+}
+
+.list-cell:selected{
+ -fx-background-color: dark-primary-color;
+ -fx-text-fill: text-primary-color;
+}
+
+.combo-box .list-cell:hover{
+ -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*table view*/
+
+.table-view{
+ -fx-background-color: #424242;
+}
+
+.table-view:focused{
+ -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+ -fx-background-color: linear-gradient(#131313 0%, #424141 100%);
+}
+
+.table-view .column-header-background .label{
+ -fx-background-color: transparent;
+ -fx-text-fill: accent-color;
+}
+
+.table-view .column-header {
+ -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+ -fx-text-fill: text-primary-color;
+ -fx-text-alignment: center;
+}
+
+.table-row-cell{
+ -fx-background-color: -fx-table-cell-border-color, #616161;
+ -fx-background-insets: 0, 0 0 1 0;
+ -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd{
+ -fx-background-color: -fx-table-cell-border-color, #424242;
+ -fx-background-insets: 0, 0 0 1 0;
+ -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+ -fx-background-color: dark-primary-color;
+ -fx-background-insets: 0;
+ -fx-background-radius: 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+ -fx-background-color: transparent;
+ -fx-min-height: 0;
+ -fx-pref-height: 0;
+ -fx-max-height: 0;
+ -fx-min-width: 0;
+ -fx-pref-width: 0;
+ -fx-max-width: 0;
+}
+
+.text-area{
+ -fx-text-fill: text-primary-color;
+}
+
+.table-view > .virtual-flow > .scroll-bar:horizontal > .increment-button,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .decrement-button {
+ -fx-opacity: 0;
+}
+
+.colorLable{
+ -fx-text-fill : black;
+ -fx-font-size : 17px;
+}

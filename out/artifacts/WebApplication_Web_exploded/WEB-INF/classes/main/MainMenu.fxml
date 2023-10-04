@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.AdminMainController">
+  <children>
+    <MenuBar styleClass="menuBar" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem fx:id="menuBarOpenButton" mnemonicParsing="false" onAction="#menuBarOpenButtonClicked" text="Open" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Skins">
+          <items>
+            <MenuItem fx:id="classicSkinButton" mnemonicParsing="false" onAction="#classicSkinButtonClicked" text="Classic" />
+            <MenuItem fx:id="chalkboardSkinButton" mnemonicParsing="false" onAction="#chalkboardSkinButtonClicked" text="Chalkboard" />
+            <MenuItem fx:id="streetSkinButton" mnemonicParsing="false" onAction="#streetSkinButtonClicked" text="Street" />
+                  <MenuItem fx:id="AviadSkinButton" mnemonicParsing="false" onAction="#AviadSkinButtonClicked" text="Aviad" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem fx:id="aboutGPUPButton" mnemonicParsing="false" onAction="#aboutGPUPButtonClicked" text="About G.P.U.P" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="Animations">
+               <items>
+                  <MenuItem fx:id="AnimationsOnButton" mnemonicParsing="false" onAction="#AnimationsOnButtonClicked" text="Turn on" />
+                  <MenuItem fx:id="AnimationsOffButton" mnemonicParsing="false" onAction="#AnimationsOffButtonClicked" text="Turn off" />
+               </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane id="optionsBar" fitToHeight="true" fitToWidth="true" minWidth="100.0" prefHeight="552.0" prefWidth="130.0">
+               <content>
+                  <VBox alignment="TOP_CENTER" minWidth="80.0" spacing="5.0" styleClass="secondaryBackground">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <children>
+                  <Label alignment="CENTER" minWidth="60.0" prefWidth="-1.0" style="&#10;" styleClass="headLines" text="Options" textAlignment="CENTER" wrapText="false" VBox.vgrow="SOMETIMES">
+                    <font>
+                      <Font size="18.0" fx:id="x1" />
+                    </font>
+                    <textFill>
+                      <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                    </textFill>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                  </Label>
+                        <VBox>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <Label text="selected graph: " />
+                                    <TextField fx:id="SelectedGraphTextField" editable="false" focusTraversable="false" minHeight="25.0" prefHeight="25.0" promptText="Graph name" VBox.vgrow="NEVER" />
+                                 </children>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <Label text="selected task: " />
+                                    <TextField fx:id="SelectedTaskTextField" editable="false" focusTraversable="false" minHeight="25.0" prefHeight="25.0" promptText="Task name" VBox.vgrow="NEVER" />
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <ToggleButton fx:id="dashboardButton" focusTraversable="false" layoutX="15.0" layoutY="154.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#dashboardButtonClicked" text="Dashboard" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="mainoptions" />
+                           </toggleGroup>
+                        </ToggleButton>
+                        <ToggleButton fx:id="graphButton" disable="true" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#graphButtonClicked" text="Graph&#10;information" textAlignment="CENTER" toggleGroup="$mainoptions" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ToggleButton>
+                        <ToggleButton fx:id="connectionsButton" disable="true" focusTraversable="false" layoutX="15.0" layoutY="167.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#connectionsButtonClicked" text="Actions on&#10;graph" textAlignment="CENTER" toggleGroup="$mainoptions" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ToggleButton>
+                        <ToggleButton fx:id="runTaskButton" disable="true" focusTraversable="false" layoutX="15.0" layoutY="136.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#runTaskButtonClicked" text="Task&#10;control" textAlignment="CENTER" toggleGroup="$mainoptions" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ToggleButton>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+        <ScrollPane fx:id="mainChangingScene" fitToHeight="true" fitToWidth="true" prefHeight="318.0" prefWidth="686.0" HBox.hgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="logoGridPane" alignment="CENTER" minHeight="250.0" minWidth="700.0" styleClass="primaryBackground">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
+                      <ColumnConstraints minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" />
+                      <RowConstraints minHeight="10.0" percentHeight="70.0" prefHeight="30.0" vgrow="ALWAYS" />
+                      <RowConstraints minHeight="10.0" percentHeight="15.0" prefHeight="30.0" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView id="logo" fx:id="logoImageView" fitWidth="650.0" opacity="0.55" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+                        <VBox fx:id="SlideBox1" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" text="Logo rotation rate" underline="true" />
+                              <Slider fx:id="rotationSlider" max="10.0" min="1.0" value="5.5" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="SlideBox2" alignment="CENTER" layoutX="125.0" layoutY="472.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" text="Button scale rate" underline="true" />
+                              <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Slider fx:id="sizeSlider" max="10.0" maxHeight="1.7976931348623157E308" min="1.0" orientation="VERTICAL" value="5.5" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </GridPane>
+               </content>
+        </ScrollPane>
+         </children>
+      </HBox>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" styleClass="menuBar" VBox.vgrow="NEVER">
+      <children>
+            <Label fx:id="userNameLabel" maxWidth="-1.0" text="User name: ">
+               <font>
+                  <Font size="11.0" fx:id="x51" />
+               </font>
+               <textFill>
+                  <Color blue="0.625" green="0.625" red="0.625" fx:id="x61" />
+               </textFill>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label maxWidth="-1.0" text="Omer Cohen Shor &amp; Alon Shakaroff" HBox.hgrow="NEVER">
+               <font>
+                  <Font size="11.0" fx:id="x5" />
+               </font>
+               <textFill>
+                  <Color blue="0.625" green="0.625" red="0.625" fx:id="x6" />
+               </textFill></Label>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="G.P.U.P" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+        </Label>
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>

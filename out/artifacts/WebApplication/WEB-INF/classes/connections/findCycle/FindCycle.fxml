@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #FCF5EC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connections.findCycle.FindCycleController">
+   <children>
+      <ListView fx:id="circleListView" disable="true" layoutX="20.0" layoutY="151.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="563.0" />
+      <Label layoutX="24.0" layoutY="42.0" text="Target:" />
+      <ComboBox fx:id="circleTargetComboBox" layoutX="24.0" layoutY="64.0" onAction="#circleTargetComboBoxClicked" prefWidth="150.0" />
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="600.0" text="Find Cycle" underline="true">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

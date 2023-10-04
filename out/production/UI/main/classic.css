@@ -1,0 +1,151 @@
+
+{
+ dark-primary-color    : #c7c7cc;
+ default-primary-color : #e5e5ea;
+ light-primary-color   : #f2f2f7;
+ accent-color          : #bad3e5;
+ primary-text-color    : #000000  ;
+ divider-color         : #BDBDBD; 
+
+}
+
+.primaryBackground{
+/*-fx-background-color : light-primary-color;*/
+-fx-background-image: url(/resources/images/classic/graybackground.jpg);
+ -fx-background-repeat: stretch;
+ -fx-background-size: cover;
+}
+.secondaryBackground{
+-fx-background-color : default-primary-color;
+}
+
+.menuBar{
+-fx-background-color : dark-primary-color;
+}
+
+.scroll-bar{
+-fx-background-color : light-primary-color;
+}
+.thumb{
+-fx-background-color : dark-primary-color;
+}
+
+.button{
+-fx-border-color : divider-color;	
+-fx-background-color : dark-primary-color;
+-fx-text-fill : primary-text-color;
+-fx-font-size : 14px;
+-fx-font-family : "system-ui";
+ -fx-font-weight : bold;
+}
+.button:hover{
+-fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+}
+
+.toggle-button{
+-fx-background-color : dark-primary-color;
+-fx-text-fill : primary-text-color;
+-fx-font-size : 14px;
+-fx-font-family : "system-ui";
+ -fx-font-weight : bold;
+}
+
+.toggle-button:hover{
+ -fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+ -fx-font-size: 15px;
+ -fx-border-width: 2;
+ -fx-border-color: divider-color;
+}
+
+.toggle-button:selected{
+ -fx-background-color : linear-gradient(dark-primary-color, darkgrey);
+ -fx-effect: innershadow(gaussian,black,5,0.2,1,1);
+}
+
+.label{
+-fx-text-fill : primary-text-color;
+-fx-font-size : 14px;
+-fx-font-family : "system-ui";
+}
+
+.headLines{
+-fx-font-size : 26px;
+-fx-text-fill: primary-text-color;
+-fx-font-family : "system-ui";
+-fx-font-weight : bold;
+}
+
+.menu:hover{
+-fx-background-color : linear-gradient(dark-primary-color, light-primary-color);
+}
+
+.dialog-pane > .button-bar > .container{
+ -fx-background-color: light-primary-color;
+}
+.dialog-pane{
+ -fx-background-color: default-primary-color;
+}
+.header-panel{
+ -fx-background-color: default-primary-color;
+}
+.searchfilebutton {
+ -fx-font-size: 12px;
+ -fx-font-family: "system-ui";
+ -fx-background-color: default-primary-color;
+}
+ .title {
+  -fx-background-color: default-primary-color;
+  -fx-border-color: dark-primary-color;
+ }
+.tab-header-background{
+ -fx-background-color: dark-primary-color;
+}
+.tab{
+  -fx-background-color: default-primary-color;
+}
+.tab:hover{
+ -fx-background-color : linear-gradient(default-primary-color, light-primary-color);
+}
+.tab:selected{
+ -fx-background-color: light-primary-color;
+}
+.text-area {
+ -fx-background-color: light-primary-color;
+}
+
+
+#logo {
+ -fx-image: url("/resources/images/classic/classicLogo.png");
+ -fx-repeat: stretch;
+ -fx-size: 900 506;
+ -fx-position: center center;
+ -fx-opacity : 1;
+}
+
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+ -fx-background-color: transparent;
+ -fx-min-height: 0;
+ -fx-pref-height: 0;
+ -fx-max-height: 0;
+ -fx-min-width: 0;
+ -fx-pref-width: 0;
+ -fx-max-width: 0;
+}
+
+.table-view > .virtual-flow > .scroll-bar:horizontal > .increment-button,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .decrement-button {
+ -fx-opacity: 0;
+}
+
+ .combo-box > .list-cell > .text{
+  -fx-font-weight: bold;
+  -fx-fill: primary-text-color;
+}
+
+ .colorLable{
+  -fx-text-fill : black;
+  -fx-font-size : 17px;
+ }
+

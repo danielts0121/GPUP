@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="807.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <content>
+      <SplitPane dividerPositions="0.5, 0.5" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="599.0" prefWidth="805.0">
+        <items>
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="200.0" prefWidth="803.0">
+               <children>
+                  <Label text="Find paths between two targets:" underline="true">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="28.0" text="Source:" />
+                  <Label layoutX="161.0" layoutY="28.0" text="Destination:" />
+                  <Label layoutX="15.0" layoutY="84.0" text="Direction:" />
+                  <ComboBox fx:id="sourceComboBox" layoutX="14.0" layoutY="45.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox fx:id="destinationComboBox" layoutX="161.0" layoutY="45.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox fx:id="directionComboBox" layoutX="14.0" layoutY="101.0" prefHeight="25.0" prefWidth="102.0" />
+                  <Button fx:id="findPathsButton" layoutX="282.0" layoutY="45.0" mnemonicParsing="false" text="Find Paths" />
+                  <TextArea fx:id="pathsListTextArea" layoutX="494.0" layoutY="33.0" prefHeight="161.0" prefWidth="280.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" prefHeight="160.0" prefWidth="160.0">
+               <children>
+                  <Label text="Deep dependencies:" underline="true">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="28.0" text="Target:" />
+                  <Label layoutX="146.0" layoutY="28.0" text="Direction:" />
+                  <ComboBox fx:id="deepDependencyDirectionComboBox" layoutX="146.0" layoutY="51.0" prefHeight="25.0" prefWidth="102.0" />
+                  <ComboBox fx:id="deepDependencyTargetComboBox" layoutX="14.0" layoutY="51.0" prefHeight="25.0" prefWidth="102.0" />
+                  <Button fx:id="deepDependenciesButton" layoutX="272.0" layoutY="51.0" mnemonicParsing="false" text="Show Dependencies" />
+                  <TextArea fx:id="deepDependenciesTextArea" layoutX="495.0" layoutY="10.0" prefHeight="132.0" prefWidth="283.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane maxHeight="-Infinity" prefHeight="200.0" prefWidth="803.0">
+               <children>
+                  <Label text="Find Cycle:" underline="true">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="37.0" text="Target:" />
+                  <ComboBox fx:id="findCycleComboBox" layoutX="14.0" layoutY="54.0" prefHeight="25.0" prefWidth="102.0" />
+                  <Button fx:id="findCycleButton" layoutX="159.0" layoutY="54.0" mnemonicParsing="false" text="Find Cycle" />
+                  <TextArea fx:id="findCycleTextArea" layoutX="496.0" layoutY="36.0" prefHeight="136.0" prefWidth="280.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </content>
+</ScrollPane>

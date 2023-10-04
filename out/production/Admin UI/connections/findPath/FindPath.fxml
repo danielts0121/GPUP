@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #FCF5EC;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="connections.findPath.FindPathController">
+   <children>
+      <Label layoutX="24.0" layoutY="57.0" text="Source:" />
+      <ComboBox fx:id="sourceComboBox" layoutX="24.0" layoutY="81.0" onAction="#sourceComboBoxClicked" prefHeight="25.0" prefWidth="150.0" />
+      <Label layoutX="217.0" layoutY="57.0" text="Destination:" />
+      <ComboBox fx:id="destinationComboBox" disable="true" layoutX="206.0" layoutY="81.0" onAction="#destinationComboBoxClicked" prefHeight="25.0" prefWidth="150.0" />
+      <RadioButton fx:id="pathRequiredForRadioButton" focusTraversable="false" layoutX="419.0" layoutY="85.0" mnemonicParsing="false" onAction="#pathRequiredForRadioButtonClicked" onKeyPressed="#pathRequiredForKeyboardPress" selected="true" text="Required for">
+         <toggleGroup>
+            <ToggleGroup fx:id="connections1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="pathDependsOnRadioButton" focusTraversable="false" layoutX="420.0" layoutY="106.0" mnemonicParsing="false" onAction="#pathDependsOnRadioButtonClicked" onKeyPressed="#pathDependsOnKeyboardPress" text="Depends on">
+         <toggleGroup>
+            <ToggleGroup fx:id="connections" />
+         </toggleGroup>
+      </RadioButton>
+      <ListView fx:id="pathListView" disable="true" layoutX="18.0" layoutY="153.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="219.0" prefWidth="570.0" />
+      <Label layoutX="419.0" layoutY="57.0" text="Direction:" />
+      <Label alignment="CENTER" prefHeight="32.0" prefWidth="600.0" text="Find Paths" underline="true">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

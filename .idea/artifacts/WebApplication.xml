@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="WebApplication">
+    <output-path>$PROJECT_DIR$/out/artifacts/WebApplication</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="WebApplication/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="WebApplication" />
+          <element id="module-output" name="SystemEngine" />
+          <element id="module-output" name="Admin UI" />
+          <element id="module-output" name="Worker UI" />
+          <element id="library" level="project" name="3rd" />
+          <element id="library" level="project" name="okio-2.8.0" />
+          <element id="library" level="project" name="okhttp-4.9.1" />
+          <element id="library" level="project" name="gson-2.1" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application_server_libraries" name="Tomcat 10.0.16" />
+          <element id="library" level="project" name="okhttp-4.9.1" />
+          <element id="library" level="project" name="gson-2.1" />
+          <element id="library" level="project" name="okio-2.8.0" />
+          <element id="library" level="project" name="okHttp" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="493.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tasks.control.TaskController">
+   <content>
+      <SplitPane dividerPositions="0.42570281124497994" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="798.0">
+         <items>
+            <SplitPane dividerPositions="0.30641330166270786" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="386.0" style="-fx-background-color: #FCF5EC;">
+               <items>
+                  <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefHeight="436.0" prefWidth="143.0" spacing="5.0" styleClass="primaryBackground">
+                     <children>
+                        <Label text="Targets list:" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="MyTargetsListView" VBox.vgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <Pane maxHeight="1.7976931348623157E308" prefHeight="440.0" prefWidth="377.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="91.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" styleClass="headLines" text="Taget Info" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font name="System Bold" size="22.0" fx:id="x11" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="60.0" prefWidth="185.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="140.0" text="Name: " />
+                              <TextField fx:id="TargetNameTextField" editable="false" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="90.0" prefHeight="25.0" prefWidth="185.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="140.0" text="Task Name: " />
+                              <TextField fx:id="TargetTaskNameTextField" editable="false" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="120.0" prefHeight="25.0" prefWidth="185.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="140.0" text="Task Type:" />
+                              <TextField fx:id="TargetTaskTypeTextField" editable="false" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="150.0" prefHeight="25.0" prefWidth="185.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="140.0" text="Status:" />
+                              <TextField fx:id="TargetStatusTextField" editable="false" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="180.0" prefHeight="25.0" prefWidth="185.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="140.0" text="Credits Earned: " />
+                              <TextField fx:id="TargetCreditsEarnedTextField" editable="false" />
+                           </children>
+                        </HBox>
+                        <VBox layoutX="15.0" layoutY="218.0" prefHeight="162.0" prefWidth="240.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" minWidth="60.0" prefWidth="-1.0" style="&#10;" styleClass="headLines" text="Log:" textAlignment="CENTER" wrapText="false">
+                                 <font>
+                                    <Font size="18.0" fx:id="x112" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="TargetsRunLogTextArea" editable="false" prefHeight="135.0" prefWidth="341.0" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </items>
+            </SplitPane>
+            <SplitPane dividerPositions="0.2871287128712871" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="402.0" style="-fx-background-color: #FCF5EC;">
+               <items>
+                  <VBox alignment="TOP_CENTER" prefWidth="143.0" spacing="5.0" styleClass="primaryBackground">
+                     <children>
+                        <Label text="Tasks list:" underline="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ListView fx:id="MyTasksListView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <Pane prefHeight="489.0" prefWidth="220.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="95.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" styleClass="headLines" text="Task Info" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font name="System Bold" size="22.0" fx:id="x111" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" layoutX="15.0" layoutY="58.0" prefWidth="220.0" styleClass="trans">
+                           <children>
+                              <Label prefWidth="150.0" text="Name:" />
+                              <TextField fx:id="TaskNameTextField" editable="false" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="15.0" layoutY="118.0" prefWidth="220.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Completed targets: " />
+                              <TextField fx:id="TargetsDoneTextField" editable="false" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="15.0" layoutY="148.0" prefWidth="220.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Credits earned:" />
+                              <TextField fx:id="TaskCreditsEarnedTextField" editable="false" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutY="272.0" maxWidth="1.7976931348623157E308" minWidth="277.0" prefHeight="25.0" prefWidth="220.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="PauseTaskButton" mnemonicParsing="false" onAction="#PauseTaskButtonClicked" prefWidth="100.0" text="Pause" HBox.hgrow="SOMETIMES" />
+                              <Button fx:id="QuitTaskButton" mnemonicParsing="false" onAction="#QuitTaskButtonClicked" prefWidth="100.0" text="Unregister" HBox.hgrow="SOMETIMES" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="15.0" layoutY="88.0" prefWidth="220.0" spacing="5.0">
+                           <children>
+                              <Label prefWidth="150.0" text="Registered Workers:" />
+                              <TextField fx:id="registeredWorkersTextField" editable="false" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" layoutX="106.0" layoutY="195.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" styleClass="headLines" text="Progress" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x1111" />
+                           </font>
+                        </Label>
+                        <ProgressBar fx:id="TaskProgressBar" layoutX="24.0" layoutY="231.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minWidth="100.0" prefHeight="18.0" prefWidth="232.0" progress="0.0" />
+                     </children>
+                  </Pane>
+               </items>
+            </SplitPane>
+         </items>
+      </SplitPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WebApplicationArchive">
+    <output-path>$PROJECT_DIR$/out/artifacts/WebApplicationArchive</output-path>
+    <root id="archive" name="WebApplicationArchive.war">
+      <element id="artifact" artifact-name="WebApplication" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="okHttp" />
+          <element id="library" level="project" name="gson-2.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
